@@ -1,0 +1,40 @@
+@host = http://localhost:8000
+@auth_token = ...
+@chat_id = ...
+
+### Create new chat
+POST {{host}}/chats
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "title": "New conversation"
+}
+
+### Chat - Zadanie pytania (RAG)
+# Ustawiamy timeout na 5 minut (300 000 ms), bo lokalne LLM bywają wolne
+POST {{host}}/chat
+Authorization: Bearer {{auth_token}}
+Accept: text/event-stream
+Content-Type: application/json
+
+{
+    "message": "Jak mam zadbać o ochronę danych?"
+}
+
+### Get all chats
+GET {{host}}/chats
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+### Get chat messages
+GET {{host}}/chats/{{chat_id}}/messages
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+### Delete chat with given id
+DELETE {{host}}/chats/{{chat_id}}
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+Content-Type: application/json

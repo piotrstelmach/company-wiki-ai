@@ -1,0 +1,64 @@
+### Send PDF file (Ingest)
+POST http://localhost:8080/process_file?department_id=-1
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="rodo.pdf"
+Content-Type: application/pdf
+
+< ../test_sources/rodo.pdf
+--WebAppBoundary--
+
+###
+
+### Send PDF file (Ingest)
+POST http://localhost:8080/process_file?department_id=1
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="Devops.pdf"
+Content-Type: application/pdf
+
+< ../test_sources/Devops.pdf
+--WebAppBoundary--
+
+###
+
+### Send PDF file (Ingest)
+POST http://localhost:8080/process_file?department_id=-1
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="podrecznik_kultury.pdf"
+Content-Type: application/pdf
+
+< ../test_sources/podrecznik_kultury.pdf
+--WebAppBoundary--
+
+###
+
+### Send PDF file (Ingest)
+POST http://localhost:8080/process_file?department_id=2
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="hr_policy.pdf"
+Content-Type: application/pdf
+
+< ../test_sources/hr_policy.pdf
+--WebAppBoundary--
+
+###
+
+### Send PDF file (Ingest)
+POST http://localhost:8080/process_file?department_id=-1
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="standardy.pdf"
+Content-Type: application/pdf
+
+< ../test_sources/standardy.pdf
+--WebAppBoundary--
+
+###
