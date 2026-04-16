@@ -155,7 +155,7 @@ All commands below should be executed from the `backend/` directory with the vir
 6. **Contextual Answers:** The assistant will search the wiki and provide an answer strictly based on the provided context and the user's role.
 
 ## 🧪 Testing
-Run the test suite using the provided script:
+Run the test suite if you want using the provided script:
 ```bash
 bash run_tests.sh
 ```
